@@ -1,1 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+:root {
+    --text: #4d4352;
+    --accent: #694479;
+    --accent-light: #d5bfdf;
+    --button: #fdfbd2;
+    --background: #fcf7f7;
+    --transition: 180ms ease-out;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+    font: 16px/1.5 Roboto, sans-serif;
+}
+
+.container {
+    width: min(calc(100% - 32px), 960px);
+    margin: 24px auto;
+}
+
+hr {
+    margin: 24px 0;
+    border: 0;
+    border-top: 1px solid var(--accent-light);
+}
+
+.menu-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    list-style: none;
+    padding: 0;
+}
+
+.menu-list a {
+    display: inline-block;
+    padding: 8px 4px;
+    color: var(--text);
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 4px;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: color var(--transition), text-decoration-color var(--transition);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+    gap: 16px;
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.button,
+.btn-form button {
+    display: inline-block;
+    padding: 10px 18px;
+    border: 1px solid var(--accent-light);
+    border-radius: 8px;
+    background: var(--button);
+    color: var(--text);
+    font: inherit;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color var(--transition), box-shadow var(--transition);
+}
+
+/* Hover feedback applies on devices with a hovering pointer. */
+@media (hover: hover) {
+    .menu-list a:hover {
+        color: var(--accent);
+        text-decoration-color: currentColor;
+    }
+
+    .gallery-item:hover img {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgb(40 29 44 / 16%);
+    }
+
+    .button:hover,
+    .btn-form button:hover {
+        background-color: #f6edb6;
+        box-shadow: 0 3px 8px rgb(40 29 44 / 14%);
+    }
+}
+
+.contact-form {
+    max-width: 560px;
+}
+
+label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 700;
+}
+
+input,
+textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 14px;
+    padding: 9px 10px;
+    border: 1px solid #88758f;
+    border-radius: 8px;
+    background: #fff;
+    color: inherit;
+    font: inherit;
+    transition: background-color var(--transition), border-color var(--transition);
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* An outline makes focus visible without changing element size. */
+.menu-list a:focus,
+.button:focus,
+.btn-form button:focus,
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--accent);
+    background-color: #fffaf0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .menu-list a,
+    .gallery-item img,
+    .button,
+    .btn-form button,
+    input,
+    textarea {
+        transition: none;
+    }
+
+    .gallery-item:hover img {
+        transform: none;
+    }
+}
