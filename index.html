@@ -1,84 +1,202 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="et">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>My Hover Animations</title>
+    <title>Minu portfoolio</title>
 </head>
 <body>
-
     <div class="container">
-        <nav class="menu-list" aria-label="Main navigation">
-            <ul>
-                <li><a href="#">home</a></li>
-                <li><a href="#works">my works</a></li>
-                <li><a href="#">my clients</a></li>
-                <li><a href="#contact">contact me</a></li>
-            </ul>
-        </nav>
+        <header class="header" id="home">
+            <div class="menu">
+                <div class="logo">
+                    <span class="logo-span">Minu portfoolio</span>
+                </div>
 
-        <hr>
-
-        <div class="gallery" id="works">
-            <div class="gallery-item">
-                <img src="images/1.webp" alt="">
+                <nav class="page-menu" aria-label="Peamenüü">
+                    <button class="hamburger" type="button" aria-expanded="false"
+                            aria-controls="page-menu-links" hidden>Menüü</button>
+                    <ul class="menu-list" id="page-menu-links">
+                        <li><a href="#home">Avaleht</a></li>
+                        <li><a href="#clients">Minu kliendid</a></li>
+                        <li><a href="#works">Minu tööd</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </nav>
             </div>
 
-            <div class="gallery-item">
-                <img src="images/1.webp" alt="">
+            <div class="profile">
+                <div class="profile-image">
+                    <img src="images/1.webp" alt="Portfoolio tutvustuspilt">
+                </div>
+
+                <div class="profile-learn-more">
+                    <div class="profile-details">
+                        <h1>Tere tulemast minu veebilehele!</h1>
+                        <p>
+                            Tere! Mina olen veebiarenduse ja IT-valdkonna huviline.
+                            Mind huvitavad programmeerimine, veebilehtede loomine,
+                            tehnoloogia ja uute oskuste arendamine.
+                        </p>
+                        <p>
+                            Minu eesmärk on luua kaasaegseid, kasutajasõbralikke ja
+                            kvaliteetseid veebilahendusi. Siit leiad ülevaate minu
+                            oskustest, projektidest ja tehtud töödest.
+                        </p>
+                        <a class="button" href="#works"><img src="images/Eye.svg" alt=""> Vaata minu töid</a>
+                    </div>
+                </div>
             </div>
+        </header>
 
-            <div class="gallery-item">
-                <img src="images/1.webp" alt="">
-            </div>
-
-        </div>
-
-        <hr>
-
-        <div class="profile-details">
-            <a class="button" href="#works">Check my works</a>
-        </div>
-
-        <hr>
-
-        <div class="contact-form" id="contact">
-            <form action="#">
-                <div class="label">
-                    <label for="name">Name</label>
+        <main class="main">
+            <section class="my-works" id="works" aria-labelledby="works-title">
+                <div class="headline">
+                    <hr>
+                    <h2 id="works-title">Minu tööd ja projektid</h2>
                 </div>
 
-                <div class="form-input">
-                    <input type="text" id="name" required>
+                <p class="section-intro">
+                    Siin tutvustan oma tehtud projekte ja praktilisi töid IT-valdkonnas.
+                    Minu projektid hõlmavad näiteks:
+                </p>
+
+                <ul>
+                    <li>Veebilehtede arendamist HTML-i ja CSS-iga.</li>
+                    <li>JavaScripti ja Pythoni programmeerimist.</li>
+                    <li>Reacti rakenduste loomist.</li>
+                    <li>Figma abil UI/UX prototüüpide kujundamist.</li>
+                    <li>IT- ja tehnoloogialahenduste loomist.</li>
+                </ul>
+
+                <p class="section-intro">
+                    Iga projekt aitab mul omandada uusi teadmisi ja täiendada oma
+                    programmeerimisoskusi.
+                </p>
+
+                <div class="gallery">
+                    <div class="gallery-item"><img src="images/1.webp" alt="Portfoolio projekti näidis 1"></div>
+                    <div class="gallery-item"><img src="images/1.webp" alt="Portfoolio projekti näidis 2"></div>
+                    <div class="gallery-item"><img src="images/1.webp" alt="Portfoolio projekti näidis 3"></div>
+                    <div class="gallery-item"><img src="images/1.webp" alt="Portfoolio projekti näidis 4"></div>
+                    <div class="gallery-item"><img src="images/1.webp" alt="Portfoolio projekti näidis 5"></div>
+                    <div class="gallery-item"><img src="images/1.webp" alt="Portfoolio projekti näidis 6"></div>
+                </div>
+            </section>
+
+            <section class="my-clients" id="clients" aria-labelledby="clients-title">
+                <div class="headline">
+                    <hr>
+                    <h2 id="clients-title">Minu kliendid</h2>
                 </div>
 
-                <div class="label">
-                    <label for="email">Email</label>
+                <p class="section-intro">
+                    Minu jaoks on oluline mõista klientide vajadusi ja pakkuda neile
+                    sobivaid lahendusi.
+                </p>
+                <p class="section-intro">
+                    Soovin teha koostööd inimestega ja ettevõtetega, kes hindavad
+                    kvaliteeti, usaldusväärsust ning head suhtlust.
+                </p>
+                <p class="section-intro">
+                    Iga projekt annab mulle võimaluse õppida midagi uut, arendada
+                    oma oskusi ja pakkuda paremaid tulemusi.
+                </p>
+
+                <div class="my-clients-cards">
+                    <article class="card">
+                        <img src="images/Car.svg" alt="">
+                        <div class="card-text-content">
+                            <h3>Autoteenindus</h3>
+                            <span>HTML</span> <span>CSS</span> <span>JavaScript</span>
+                            <p>Näidisprojekt: lihtne ja selge tutvustuslehekülg koos teenuste ning kontaktandmetega.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="images/Cart.svg" alt="">
+                        <div class="card-text-content">
+                            <h3>Veebipood</h3>
+                            <span>Figma</span> <span>React</span> <span>UI/UX</span>
+                            <p>Näidisprojekt: veebipoe prototüüp ja kasutajasõbralik tootekataloogi kujundus.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="contact" id="contact" aria-labelledby="contact-title">
+                <div class="headline">
+                    <hr>
+                    <h2 id="contact-title">Kontakt</h2>
                 </div>
 
-                <div class="form-input">
-                    <input type="email" id="email" required>
+                <p class="section-intro">
+                    Kui soovid minuga ühendust võtta või koostööd arutada, kirjuta
+                    mulle e-posti teel või helista.
+                </p>
+
+                <div class="contact-layout">
+                    <div class="contact-form">
+                        <form action="#" novalidate aria-describedby="form-note">
+                            <div class="form-field">
+                                <label for="name">Nimi</label>
+                                <input type="text" id="name" name="name" required
+                                       autocomplete="name" aria-describedby="name-error">
+                                <p class="field-error" id="name-error"></p>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="email">E-post</label>
+                                <input type="email" id="email" name="email" required
+                                       autocomplete="email" aria-describedby="email-error">
+                                <p class="field-error" id="email-error"></p>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="message">Sõnum</label>
+                                <textarea id="message" name="message" rows="5" required
+                                          aria-describedby="message-error"></textarea>
+                                <p class="field-error" id="message-error"></p>
+                            </div>
+
+                            <p id="form-note">Vaata kontaktandmeid.</p>
+                            <button class="button" type="submit">Saada sõnum</button>
+                            <p id="form-status" role="status"></p>
+                        </form>
+                    </div>
+
+                    <div class="contact-sidebar">
+                        <div class="contact-details">
+                            <h3>Kontaktandmed</h3>
+                            <ul>
+                                <li><img src="images/phone-alt.svg" alt="Telefon"> +372xxxxxxxx</li>
+                                <li><img src="images/envelope.svg" alt="E-post"> <a href="mailto:secretcoder@inbox.eu">secretcoder@inbox.eu</a></li>
+                            </ul>
+                        </div>
+
+                        <section class="social-media" aria-labelledby="social-title">
+                            <div class="headline">
+                                <h3 id="social-title">Leia mind</h3>
+                            </div>
+                            <div class="social-media-icons">
+                                <ul>
+                                    <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="images/facebook-square.svg" alt=""><span>Facebook</span></a></li>
+                                    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="images/instagram.svg" alt=""><span>Instagram</span></a></li>
+                                    <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><img src="images/linkedin.svg" alt=""><span>LinkedIn</span></a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
                 </div>
+            </section>
+        </main>
 
-                <div class="label">
-                    <label for="message">Message</label>
-                </div>
-                <div class="text-area">
-                    <textarea name="message" id="message" rows="6" required></textarea>
-                </div>
-
-                <div class="btn-form">
-                    <button type="submit">Send it</button>
-                </div>
-
-
-            </form>
-
-
-        </div>
-
+        <footer>
+            <p>© 2026, Minu portfoolio</p>
+        </footer>
     </div>
-    
+
+    <script src="portfolio.js" defer></script>
 </body>
 </html>
